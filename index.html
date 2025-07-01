@@ -7,41 +7,69 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Top Navigation Bar -->
+    <nav style="background-color: #FFF6E1; padding: 16px 0; border-bottom: 1px solid #eee;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;">
+            <!-- Logo and Brand Name -->
+            <div style="display: flex; align-items: center;">
+                <!-- Use the water can image as logo, now larger to match font size -->
+                <img src="img/water-can-transparent.png" alt="Charity Water Logo" style="height: 1.2em; min-height: 38px; max-height: 48px; margin-right: 8px; vertical-align: middle;">
+                <!-- Brand name with Georgia Pro font and new color -->
+                <span style="font-family: 'Georgia Pro', Georgia, serif; font-weight: bold; color: #003366; font-size: 1.2em;">charity:water</span>
+            </div>
+            <!-- Navigation Links -->
+            <div>
+                <a href="#" style="color: #222; text-decoration: none; margin-right: 24px; font-weight: bold; letter-spacing: 1px;">SIGN IN</a>
+                <!-- Give Button -->
+                <a href="#" style="background-color: #FFC907; color: #222; text-decoration: none; padding: 10px 22px; border-radius: 6px; font-weight: bold; font-size: 1em; vertical-align: middle;">
+                    GIVE <span style="font-size: 1.1em;">💧</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
-
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
-
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+    <section class="hero" style="border-radius: 0; margin: 0; width: 100vw; position: relative; left: 50%; right: 50%; transform: translateX(-50%);">
+        <!-- Group all hero content for left alignment -->
+        <div class="hero-content">
+            <!-- Main headline -->
+            <h1>Give Clean Water. Change a Life Forever.</h1>
+            <!-- Subheadline -->
+            <p>100% of your donation funds sustainable, community-led water projects—$40 gives one person access to safe water for life.</p>
+            
+            <!-- Donation Box -->
+            <div class="donation-box" style="max-width: 340px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(46,157,247,0.10); padding: 24px 18px; color: #222; margin-top: 32px;">
+                <!-- Donation Frequency Buttons -->
+                <div style="display: flex; margin-bottom: 18px;">
+                    <button style="flex:1; padding: 10px 0; border: none; background: #f4f8fb; color: #222; font-weight: bold; border-radius: 6px 0 0 6px; cursor: pointer;">GIVE ONCE</button>
+                    <button style="flex:1; padding: 10px 0; border: none; background: #FFC907; color: #222; font-weight: bold; border-radius: 0 6px 6px 0; cursor: pointer;">MONTHLY</button>
+                </div>
+                <!-- Donation Amount Options -->
+                <div>
+                    <p style="font-weight: bold; margin-bottom: 12px;">Choose an amount to give per month</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
+                        <button style="flex:1 1 40%; padding: 10px 0; border: 1px solid #eee; background: #f4f8fb; color: #222; border-radius: 6px; cursor: pointer;">$10 <span style="font-size:0.8em;">USD/mo</span></button>
+                        <button style="flex:1 1 40%; padding: 10px 0; border: 1px solid #eee; background: #f4f8fb; color: #222; border-radius: 6px; cursor: pointer;">$20 <span style="font-size:0.8em;">USD/mo</span></button>
+                        <button style="flex:1 1 40%; padding: 10px 0; border: 2px solid #FFC907; background: #FFC907; color: #222; border-radius: 6px; cursor: pointer; font-weight: bold;">$40 <span style="font-size:0.8em;">USD/mo</span></button>
+                        <button style="flex:1 1 40%; padding: 10px 0; border: 1px solid #eee; background: #f4f8fb; color: #222; border-radius: 6px; cursor: pointer;">$100 <span style="font-size:0.8em;">USD/mo</span></button>
+                        <input type="text" placeholder="Other amount" style="flex:1 1 80%; padding: 10px; border: 1px solid #eee; border-radius: 6px; margin-top: 6px;">
+                    </div>
+                    <!-- Join Today Button -->
+                    <button style="width: 100%; background: #FFC907; color: #222; border: none; border-radius: 6px; padding: 12px 0; font-weight: bold; font-size: 1.1em; cursor: pointer; margin-top: 8px;">JOIN TODAY</button>
+                </div>
+                <!-- Small note below the button -->
+                <p style="font-size: 0.9em; color: #555; margin-top: 12px;">*On average, every $10,000 donated funds one clean water project.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+    <!-- Bottom Navigation Bar -->
+    <nav style="background: ##77a8bb; padding: 18px 0; border-top: 1px solid #dbeafe; margin-top: 32px;">
+        <div style="max-width: 900px; margin: 0 auto; display: flex; justify-content: right; gap:18px;">
+            <a href="#" style="background: #fff; color: #222; text-decoration: none; padding: 12px 28px; border-radius: 6px; font-weight: bold; border: 1px solid #e0e0e0;">TAKE ACTION <span style="font-size:1em;">▼</span></a>
+            <a href="#" style="background: #fff; color: #222; text-decoration: none; padding: 12px 28px; border-radius: 6px; font-weight: bold; border: 1px solid #e0e0e0;">ABOUT US <span style="font-size:1em;">▼</span></a>
+            <a href="#" style="background: #fff; color: #222; text-decoration: none; padding: 12px 28px; border-radius: 6px; font-weight: bold; border: 1px solid #e0e0e0;">WHY WATER?</a>
+        </div>
+    </nav>
 </body>
 </html>

@@ -25,7 +25,7 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
+  background-color: #77a8bb; /* Changed to requested blue shade */
   font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -43,15 +43,12 @@ section {
 
 /* Hero Section Styles */
 .hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
+  position: relative;
+  /* Remove background-image from here and move it to the pseudo-element */
+  background-image: none;
+  color: #fff;
+  text-align: left;
+  padding: 0 20px; /* Remove top and bottom padding, keep left/right for content */
   border-radius: 0 0 16px 16px; /* Only round bottom corners */
 
   /* Add a dark overlay for better text readability */
@@ -60,10 +57,57 @@ section {
   background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
 }
 
+/* Flip the hero background image horizontally using a pseudo-element */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Set the background image and flip it horizontally */
+  background-image: url(img/Madagascar_2019_CG-0453.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scaleX(-1); /* Flip horizontally */
+  z-index: 0; /* Place behind the content */
+  /* Add the blue overlay for readability */
+  background-blend-mode: darken;
+  background-color: rgba(46, 157, 247, 0.45);
+  border-radius: 0 0 16px 16px;
+}
+
+/* Make sure the hero content is above the background image */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Group hero content to control its width and alignment */
+.hero-content {
+  max-width: 420px; /* Limit width for better readability */
+  margin-left: 0;   /* Align to the left edge */
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 18px; /* Add a little space from the edge */
+  padding-right: 0;
+  position: relative;
+  z-index: 1; /* Make sure it's above the background */
+}
+
+/* Make the donation box align left inside the hero */
+.hero-content .donation-box {
+  margin-left: 0;
+  margin-right: auto;
+}
+
 /* Make the headline bold and modern */
 .hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova for heading */
+  font-size: 3em; /* Make the headline larger */
+  font-weight: regular;
   letter-spacing: 1px;
   margin-bottom: 15px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
@@ -71,7 +115,8 @@ section {
 
 /* Style the subheadline */
 .hero p {
-  font-size: 1.2em;
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova for subheadline */
+  font-size: 1.5em; /* Make the subheadline larger */
   margin-top: 0;
   text-shadow: 0 1px 4px rgba(0,0,0,0.12);
 }
@@ -133,7 +178,15 @@ h2 {
 
 /* Add some spacing between sections */
 section {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+}
+
+/* Style for the bottom navigation panel */
+.bottom-nav {
+  background: #77a8bb !important; /* Use requested color and override inline style if needed */
+  padding: 0px 0;
+  border-top: 1px solid ##77a8bb;
+  margin-top: 32px;
 }
 
 /* 
@@ -176,6 +229,13 @@ section {
   .impact-image {
     width: 90%;    /* Make image take up most of the width */
     max-width: 220px;
+  }
+
+  /* Responsive: On small screens, add some side padding */
+  .hero-content {
+    max-width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
 
